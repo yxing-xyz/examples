@@ -1,0 +1,10 @@
+core/out
+.idea/
+.gradle
+build/
+cpp/build/
+.vscode
+cpp/.cache
+cpp/a.out
+cpp/compile_commands.json
+.ccls-cache/
