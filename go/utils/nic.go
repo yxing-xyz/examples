@@ -1,8 +1,7 @@
-package util
+package utils
 
 import (
 	"errors"
-	"log"
 	"net"
 	"os"
 	"strings"
@@ -81,7 +80,7 @@ func isCaredNetError(err error) bool {
 	}
 
 	if netErr.Timeout() {
-		log.Println("timeout")
+		log.Printf("timeout\n")
 		return true
 	}
 
@@ -99,10 +98,10 @@ func isCaredNetError(err error) bool {
 		if errno, ok := t.Err.(syscall.Errno); ok {
 			switch errno {
 			case syscall.ECONNREFUSED:
-				log.Println("connect refused")
+				log.Printf("connect refused\n")
 				return true
 			case syscall.ETIMEDOUT:
-				log.Println("timeout")
+				log.Printf("timeout\n")
 				return true
 			}
 		}
