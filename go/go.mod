@@ -12,6 +12,7 @@ require (
 	github.com/miekg/dns v1.1.66
 	github.com/moby/moby v27.1.2+incompatible
 	github.com/pkg/errors v0.9.1
+	github.com/rs/zerolog v1.34.0
 	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/vishvananda/netlink v1.1.0
 	golang.org/x/crypto v0.37.0
@@ -29,6 +30,8 @@ require (
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-ole/go-ole v1.2.6 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/mattn/go-colorable v0.1.13 // indirect
+	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/moby/docker-image-spec v1.3.1 // indirect
 	github.com/moby/term v0.5.0 // indirect
 	github.com/morikuni/aec v1.0.0 // indirect
