@@ -2,7 +2,7 @@ package main
 
 import (
 	"bytes"
-	"code/util"
+	"code/utils"
 	"fmt"
 	"io"
 	"log"
@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	util.DefaultGatewayRouteInterface()
+	utils.DefaultGatewayRouteInterface()
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	l, err := net.Listen("tcp", ":8081")
 	if err != nil {
