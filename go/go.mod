@@ -9,11 +9,12 @@ require (
 	github.com/beevik/ntp v1.4.3
 	github.com/docker/docker v27.1.2+incompatible
 	github.com/gorilla/websocket v1.5.3
+	github.com/miekg/dns v1.1.66
 	github.com/moby/moby v27.1.2+incompatible
 	github.com/pkg/errors v0.9.1
 	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/vishvananda/netlink v1.1.0
-	golang.org/x/crypto v0.24.0
+	golang.org/x/crypto v0.37.0
 	golang.org/x/sys v0.32.0
 )
 
@@ -41,7 +42,10 @@ require (
 	go.opentelemetry.io/otel/metric v1.28.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.28.0 // indirect
 	go.opentelemetry.io/otel/trace v1.28.0 // indirect
-	golang.org/x/net v0.26.0 // indirect
+	golang.org/x/mod v0.24.0 // indirect
+	golang.org/x/net v0.39.0 // indirect
+	golang.org/x/sync v0.13.0 // indirect
 	golang.org/x/time v0.6.0 // indirect
+	golang.org/x/tools v0.32.0 // indirect
 	gotest.tools/v3 v3.5.1 // indirect
 )
