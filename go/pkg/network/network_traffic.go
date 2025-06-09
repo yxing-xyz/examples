@@ -4,6 +4,7 @@ import (
 	"code/utils"
 	"fmt"
 	"net"
+	"os"
 	"runtime"
 	"sync"
 	"sync/atomic"
@@ -169,7 +170,7 @@ func (tm *TrafficManager) Close() {
 }
 
 func (tm *TrafficManager) capture(ifaceName, syntax string) {
-	var fanoutGroupID uint16 = 0x2021
+	var fanoutGroupID uint16 = uint16((os.Getpid() ^ int(time.Now().UnixNano())) % 0xFFFF)
 	// 创建 TPacket 对象（参数可调节以适配性能/延迟）
 	handle, err := afpacket.NewTPacket(
 		afpacket.OptInterface(ifaceName),
@@ -177,7 +178,7 @@ func (tm *TrafficManager) capture(ifaceName, syntax string) {
 		afpacket.OptNumBlocks(64),    // 共 256MB
 		afpacket.OptFrameSize(65536), // MTU 最大值
 		afpacket.OptPollTimeout(afpacket.DefaultPollTimeout),
-		afpacket.OptTPacketVersion(afpacket.TPacketVersion3),
+		afpacket.OptTPacketVersion(afpacket.TPacketVersionHighestAvailable),
 	)
 	if err != nil {
 		fmt.Printf("failed to create handle: %v\n", err)
